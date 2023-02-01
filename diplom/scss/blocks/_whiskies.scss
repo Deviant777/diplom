@@ -114,8 +114,6 @@
 
 
         >div {
-            display: flex;
-            justify-content: flex-end;
             background-image: url(images/blackVelvetOriginal.jpg);
             background-size: cover;
             background-position: center;
@@ -123,6 +121,11 @@
             position: absolute;
             right: 0;
             height: 100%;
+
+            >div {
+                position: relative;
+                left: 70%;
+            }
         }
     }
 
@@ -140,6 +143,11 @@
             position: absolute;
             height: 100%;
             left: 0;
+
+            >div {
+                position: relative;
+                left: 16%;
+            }
         }
     }
 
@@ -149,8 +157,6 @@
 
 
         >div {
-            display: flex;
-            justify-content: flex-end;
             background-image: url(images/blackVelvetToasted.jpg);
             background-size: cover;
             background-position: center;
@@ -158,6 +164,11 @@
             position: absolute;
             right: 0;
             height: 100%;
+
+            >div {
+                position: relative;
+                left: 70%;
+            }
         }
     }
 
@@ -175,6 +186,11 @@
             position: absolute;
             left: 0;
             height: 100%;
+
+            >div {
+                position: relative;
+                left: 16%;
+            }
         }
     }
 
@@ -184,8 +200,6 @@
 
 
         >div {
-            display: flex;
-            justify-content: flex-end;
             background-image: url(images/blackVelvetPeach.jpg);
             background-size: cover;
             background-position: center;
@@ -193,6 +207,11 @@
             position: absolute;
             right: 0;
             height: 100%;
+
+            >div {
+                position: relative;
+                left: 70%;
+            }
         }
     }
 }
@@ -303,6 +322,10 @@
                     justify-content: flex-start;
                     width: 155%;
                     left: 0;
+
+                    >div {
+                        left: 0;
+                    }
                 }
             }
 
@@ -311,6 +334,10 @@
                     justify-content: flex-start;
                     width: 155%;
                     left: 0;
+
+                    >div {
+                        left: 0;
+                    }
                 }
             }
 
@@ -319,6 +346,10 @@
                     justify-content: flex-start;
                     width: 155%;
                     left: 0;
+
+                    >div {
+                        left: 0;
+                    }
                 }
             }
 
@@ -327,6 +358,10 @@
                     justify-content: flex-start;
                     width: 155%;
                     left: 0;
+
+                    >div {
+                        left: 0;
+                    }
                 }
             }
 
@@ -335,6 +370,10 @@
                     justify-content: flex-start;
                     width: 155%;
                     left: 0;
+
+                    >div {
+                        left: 0;
+                    }
                 }
             }
         }

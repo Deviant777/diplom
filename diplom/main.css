@@ -1147,8 +1147,6 @@ footer .copyright {
   overflow: hidden;
 }
 .whiskies .blackVelvetOriginal > div {
-  display: flex;
-  justify-content: flex-end;
   background-image: url(images/blackVelvetOriginal.jpg);
   background-size: cover;
   background-position: center;
@@ -1156,6 +1154,10 @@ footer .copyright {
   position: absolute;
   right: 0;
   height: 100%;
+}
+.whiskies .blackVelvetOriginal > div > div {
+  position: relative;
+  left: 70%;
 }
 .whiskies .blackVelvetReserve {
   position: relative;
@@ -1172,13 +1174,15 @@ footer .copyright {
   height: 100%;
   left: 0;
 }
+.whiskies .blackVelvetReserve > div > div {
+  position: relative;
+  left: 16%;
+}
 .whiskies .blackVelvetToasted {
   position: relative;
   overflow: hidden;
 }
 .whiskies .blackVelvetToasted > div {
-  display: flex;
-  justify-content: flex-end;
   background-image: url(images/blackVelvetToasted.jpg);
   background-size: cover;
   background-position: center;
@@ -1186,6 +1190,10 @@ footer .copyright {
   position: absolute;
   right: 0;
   height: 100%;
+}
+.whiskies .blackVelvetToasted > div > div {
+  position: relative;
+  left: 70%;
 }
 .whiskies .blackVelvetApple {
   position: relative;
@@ -1202,13 +1210,15 @@ footer .copyright {
   left: 0;
   height: 100%;
 }
+.whiskies .blackVelvetApple > div > div {
+  position: relative;
+  left: 16%;
+}
 .whiskies .blackVelvetPeach {
   position: relative;
   overflow: hidden;
 }
 .whiskies .blackVelvetPeach > div {
-  display: flex;
-  justify-content: flex-end;
   background-image: url(images/blackVelvetPeach.jpg);
   background-size: cover;
   background-position: center;
@@ -1216,6 +1226,10 @@ footer .copyright {
   position: absolute;
   right: 0;
   height: 100%;
+}
+.whiskies .blackVelvetPeach > div > div {
+  position: relative;
+  left: 70%;
 }
 
 @media screen and (max-width: 980px) {
@@ -1298,9 +1312,15 @@ footer .copyright {
     width: 155%;
     left: 0;
   }
+  body > .whiskies .blackVelvetOriginal > div > div {
+    left: 0;
+  }
   body > .whiskies .blackVelvetReserve > div {
     justify-content: flex-start;
     width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetReserve > div > div {
     left: 0;
   }
   body > .whiskies .blackVelvetToasted > div {
@@ -1308,14 +1328,23 @@ footer .copyright {
     width: 155%;
     left: 0;
   }
+  body > .whiskies .blackVelvetToasted > div > div {
+    left: 0;
+  }
   body > .whiskies .blackVelvetApple > div {
     justify-content: flex-start;
     width: 155%;
     left: 0;
   }
+  body > .whiskies .blackVelvetApple > div > div {
+    left: 0;
+  }
   body > .whiskies .blackVelvetPeach > div {
     justify-content: flex-start;
     width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetPeach > div > div {
     left: 0;
   }
 }
