@@ -1,0 +1,31 @@
+body {
+    .original {
+        >:first-child {
+            .appleBackground {
+                background-image: url(images/bv-apple.jpg);
+            }
+        }
+        >:nth-child(2){
+            >div{
+                >div{
+                    .appleBottle {
+                        background-image: url(images/4.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        .original {
+            >:first-child {
+                .appleBackground {
+                    background-image: url(images/bv-apple-mobile.jpg);
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,342 @@
+.whiskies {
+    >:nth-child(n+2) {
+        height: 500px;
+        width: 100%;
+
+        >div {
+            padding: 100px 60px;
+            width: 100%;
+
+            >div {
+                width: 480px;
+
+                >div {
+                    font-family: 'PT Serif', serif;
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 400;
+                }
+
+                >a {
+                    margin-top: 25px;
+                    padding: 0 10px;
+                    border: 1px solid #CBAA54;
+                    height: 45px;
+                    width: 120px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #CBAA54;
+                        transition: .4s ease;
+
+                    }
+
+                    &:hover>span {
+                        color: black;
+                        transition: .4s ease;
+                    }
+
+                    &:not(:hover) {
+                        transition: .4s ease;
+                    }
+
+                    &:not(:hover)>span {
+                        transition: .4s ease;
+                    }
+
+                    >span {
+                        font-family: 'Oswald', sans-serif;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        h2 {
+            margin-bottom: 22px;
+            padding-bottom: 20px;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #fff;
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+
+            &::after {
+                content: "";
+                background: #CBAA54;
+                height: 1px;
+                width: 180px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    .blackVelvetWhiskies {
+        padding-top: 100px;
+
+        >div {
+            padding: 0 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/blackVelvesWhiskies.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 250px;
+
+            >h2 {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 54px;
+                line-height: 60px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+    }
+
+    .blackVelvetOriginal {
+        position: relative;
+        overflow: hidden;
+
+
+        >div {
+            display: flex;
+            justify-content: flex-end;
+            background-image: url(images/blackVelvetOriginal.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 145%;
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    .blackVelvetReserve {
+        position: relative;
+        overflow: hidden;
+
+        >div {
+            display: flex;
+            justify-content: flex-start;
+            background-image: url(images/blackVelvetReserve.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 145%;
+            position: absolute;
+            height: 100%;
+            left: 0;
+        }
+    }
+
+    .blackVelvetToasted {
+        position: relative;
+        overflow: hidden;
+
+
+        >div {
+            display: flex;
+            justify-content: flex-end;
+            background-image: url(images/blackVelvetToasted.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 145%;
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    .blackVelvetApple {
+        position: relative;
+        overflow: hidden;
+
+        >div {
+            display: flex;
+            justify-content: flex-start;
+            background-image: url(images/blackVelvetApple.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 145%;
+            position: absolute;
+            left: 0;
+            height: 100%;
+        }
+    }
+
+    .blackVelvetPeach {
+        position: relative;
+        overflow: hidden;
+
+
+        >div {
+            display: flex;
+            justify-content: flex-end;
+            background-image: url(images/blackVelvetPeach.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 145%;
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    body {
+        >.whiskies {
+            .blackVelvetWhiskies {
+                >div {
+                    padding: 0 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url(images/blackVelvesWhiskies.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 200px;
+
+                    >h2 {
+                        font-size: 43px;
+                        line-height: 48px;
+                    }
+                }
+            }
+
+            >:nth-child(n+2) {
+                height: 450px;
+
+                >div {
+                    padding: 80px 40px;
+
+                    >div {
+                        max-width: 380px;
+                    }
+                }
+
+                h2 {
+                    margin-bottom: 17px;
+                    padding-bottom: 15px;
+                    font-size: 32px;
+                    line-height: 40px;
+
+                    &::after {
+                        width: 165px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        >.whiskies {
+            .blackVelvetWhiskies {
+                padding-top: 60px;
+
+                >div {
+                    padding: 0 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url(images/blackVelvesWhiskies.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 200px;
+
+                    >h2 {
+                        font-size: 32px;
+                        line-height: 36px;
+
+                        &::after {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+
+            >:nth-child(n+2) {
+                height: 400px;
+
+                >div {
+                    padding: 60px 20px;
+
+                    >div {
+                        max-width: 200px;
+                    }
+                }
+
+                h2 {
+                    margin-bottom: 12px;
+                    padding-bottom: 10px;
+                    font-size: 22px;
+                    line-height: 30px;
+
+                    &::after {
+                        width: 150px;
+                    }
+                }
+            }
+
+            .blackVelvetOriginal {
+
+                >div {
+                    justify-content: flex-start;
+                    width: 155%;
+                    left: 0;
+                }
+            }
+
+            .blackVelvetReserve {
+                >div {
+                    justify-content: flex-start;
+                    width: 155%;
+                    left: 0;
+                }
+            }
+
+            .blackVelvetToasted {
+                >div {
+                    justify-content: flex-start;
+                    width: 155%;
+                    left: 0;
+                }
+            }
+
+            .blackVelvetApple {
+                >div {
+                    justify-content: flex-start;
+                    width: 155%;
+                    left: 0;
+                }
+            }
+
+            .blackVelvetPeach {
+                >div {
+                    justify-content: flex-start;
+                    width: 155%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,457 @@
+.heritage {
+    padding-top: 100px;
+    background: #000;
+
+    h2 {
+        margin-bottom: 24px;
+        padding-bottom: 30px;
+        color: #fff;
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: 'PT Serif', serif;
+        position: relative;
+
+        &::after {
+            content: "";
+            background: #CBAA54;
+            height: 1px;
+            width: 180px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 400;
+        font-style: italic;
+        font-family: 'PT Serif', serif;
+        color: #fff;
+    }
+
+    .expertlyCrafted {
+        height: 500px;
+        width: 100%;
+        background-image: url(images/black-velvet-heritage.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        div {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 60px;
+
+            h1 {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 54px;
+                line-height: 60px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                color: #fff;
+            }
+        }
+    }
+
+    .ourHeritage {
+        width: 100%;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            padding: 100px 60px;
+            width: 100%;
+
+            >:first-child {
+                padding-right: 30px;
+                width: 490px;
+            }
+
+            >:nth-child(2) {
+                padding-left: 30px;
+                width: 490px;
+
+                >div {
+                    background-image: url(images/ourHeritageImg.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    height: 303.6px;
+                }
+            }
+        }
+    }
+
+    .whyHeritage {
+        width: 100%;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            padding: 100px 60px;
+            width: 100%;
+
+            >:first-child {
+                padding-right: 30px;
+                width: 490px;
+
+                >div {
+                    background-image: url(images/whyHeritage.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 303.6px;
+                }
+            }
+
+            >:nth-child(2) {
+                padding-left: 30px;
+                width: 490px;
+            }
+        }
+    }
+
+    .whatHeritage {
+        width: 100%;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            padding: 100px 60px;
+            width: 100%;
+
+            >:first-child {
+                padding-right: 30px;
+                width: 490px;
+            }
+
+            >:nth-child(2) {
+                padding-left: 30px;
+                width: 490px;
+
+                >div {
+                    background-image: url(images/whatHeritage.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 303.6px;
+                }
+            }
+        }
+    }
+
+    .whiskyHeritage {
+        width: 100%;
+
+        >div {
+            display: flex;
+            justify-content: center;
+            padding: 100px 60px;
+            width: 100%;
+
+            >:first-child {
+                padding-right: 30px;
+                width: 490px;
+
+                >div {
+                    background-image: url(images/whiskyHeritage.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 303.6px;
+                }
+            }
+
+            >:nth-child(2) {
+                padding-left: 30px;
+                width: 490px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        .heritage {
+
+            .ourHeritage,
+            .whatHeritage {
+
+                >div {
+                    padding: 80px 40px;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    >:first-child {
+                        order: 2;
+                        padding: 0;
+                        width: 70%;
+                        margin-top: 60px;
+                        position: relative;
+                        left: 30%;
+
+                        >h2 {
+                            margin-bottom: 22px;
+                            padding-bottom: 25px;
+                            font-size: 24px;
+                            line-height: 28px;
+
+                            &::after {
+                                width: 165px;
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                font-size: 19px;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+
+                    >:nth-child(2) {
+                        width: 70%;
+                        padding: 0;
+                        height: 415.8px;
+
+                        >div {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .whyHeritage,
+            .whiskyHeritage {
+                >div {
+                    padding: 80px 40px;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+
+                    >:nth-child(2) {
+                        padding: 0;
+                        width: 70%;
+                        margin-top: 60px;
+                        position: relative;
+                        left: 30%;
+
+                        >h2 {
+                            margin-bottom: 22px;
+                            padding-bottom: 25px;
+                            font-size: 24px;
+                            line-height: 28px;
+
+                            &::after {
+                                width: 165px;
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                font-size: 19px;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+
+                    >:first-child {
+                        width: 70%;
+                        padding: 0;
+                        height: 415.8px;
+
+                        >div {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    body {
+        .heritage {
+            padding-top: 60px;
+
+            .ourHeritage,
+            .whatHeritage {
+
+                >div {
+                    padding: 60px 20px;
+
+                    >:first-child {
+                        width: 75%;
+                        left: 25%;
+
+                        >h2 {
+                            margin-bottom: 18px;
+                            padding-bottom: 20px;
+                            font-size: 20px;
+                            line-height: 26px;
+
+                            &::after {
+                                width: 150px;
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                font-size: 18px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+
+                    >:nth-child(2) {
+                        width: 75%;
+                        left: 25%;
+
+                    }
+                }
+            }
+
+            .whyHeritage,
+            .whiskyHeritage {
+                >div {
+                    padding: 60px 20pxt;
+
+                    >:nth-child(2) {
+                        width: 75%;
+                        left: 25%;
+
+                        >h2 {
+                            margin-bottom: 18px;
+                            padding-bottom: 20px;
+                            font-size: 20px;
+                            line-height: 26px;
+
+                            &::after {
+                                width: 150px;
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                font-size: 18px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+
+                    >:first-child {
+                        width: 75%;
+                        left: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    body {
+        .heritage {
+
+            .ourHeritage,
+            .whatHeritage {
+
+                >div {
+                    padding: 60px 20px;
+
+                    >:first-child {
+                        width: 100%;
+                        left: 0;
+
+                        >h2 {
+                            text-align: center;
+
+                            &::after {
+                                left: calc(50% - 75px);
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    >:nth-child(2) {
+                        width: 100%;
+                        left: 0;
+
+                    }
+                }
+            }
+
+            .whyHeritage,
+            .whiskyHeritage {
+                >div {
+                    padding: 60px 20px;
+
+                    >:nth-child(2) {
+                        width: 100%;
+                        left: 0;
+
+                        >h2 {
+                            text-align: center;
+
+                            &::after {
+                                left: calc(50% - 75px);
+                            }
+                        }
+
+                        >div {
+                            >p {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    >:first-child {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .heritage {
+        .expertlyCrafted {
+            height: 450px;
+
+            div {
+                h1 {
+                    font-size: 43px;
+                    line-height: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .heritage {
+        .expertlyCrafted {
+            height: 400px;
+
+            div {
+                h1 {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}

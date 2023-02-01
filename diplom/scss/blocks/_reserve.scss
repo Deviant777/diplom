@@ -1,0 +1,31 @@
+body {
+    .original {
+        >:first-child {
+            .reserveBackground {
+                background-image: url(images/bv-reserve.jpg);
+            }
+        }
+        >:nth-child(2){
+            >div{
+                >div{
+                    .reserveBottle {
+                        background-image: url(images/2.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        .original {
+            >:first-child {
+                .reserveBackground {
+                    background-image: url(images/bv-reserve-mobile.jpg);
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

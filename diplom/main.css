@@ -1,0 +1,2198 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body,
+html {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  z-index: 10;
+}
+header nav {
+  height: 100%;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+}
+header nav .bvLogo {
+  position: absolute;
+  display: none;
+}
+header nav .bvLogo > a {
+  display: block;
+}
+header nav #burgerCheckbox {
+  display: none;
+}
+header nav #burgerCheckbox:checked + .burgerButton > span {
+  transform: rotate(45deg);
+}
+header nav #burgerCheckbox:checked + .burgerButton > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+header nav #burgerCheckbox:checked + .burgerButton > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header nav #burgerCheckbox:checked ~ .menu__box {
+  left: 0 !important;
+}
+header nav .burgerButton {
+  position: fixed;
+  top: 43px;
+  left: 40px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+header nav .burgerButton > span,
+header nav .burgerButton > span::before,
+header nav .burgerButton > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+header nav .burgerButton > span {
+  top: calc(50% - 0.5px);
+}
+header nav .burgerButton > span::before {
+  content: "";
+  top: calc(50% - 5px);
+}
+header nav .burgerButton > span::after {
+  content: "";
+  bottom: calc(50% - 6px);
+}
+header nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul :first-child {
+  width: 166.17px;
+}
+header nav ul :nth-child(2) {
+  width: 155.39px;
+}
+header nav ul :nth-child(3) {
+  width: 290px;
+  height: 65px;
+  background: url(images/headerLogo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+}
+header nav ul :nth-child(3) a {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+header nav ul :nth-child(4) {
+  width: 153.29px;
+}
+header nav ul :last-child {
+  width: 164.78px;
+  white-space: nowrap;
+}
+header nav ul li {
+  padding: 30px 35px;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li a {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  padding: 10px 10px 11px;
+  font-size: 16px;
+  line-height: 19px;
+}
+header nav ul li a ::before {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  content: "";
+  background-image: url(images/btnIcon.svg);
+}
+header nav ul li a span {
+  padding-left: 16px;
+  position: relative;
+}
+header nav ul li a:hover span::before {
+  transform: rotate(90deg);
+  transition: 0.4s ease;
+}
+header nav ul li a:hover {
+  transition: 0.4s ease;
+  color: rgb(237, 204, 114);
+}
+header nav ul li a:not(:hover) {
+  transition: 0.4s ease;
+}
+header nav ul li a:not(:hover) span::before {
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  header nav ul li {
+    padding: 30px 25px;
+  }
+  header nav ul :first-child {
+    width: 146.17px;
+  }
+  header nav ul :nth-child(2) {
+    width: 135.39px;
+  }
+  header nav ul :nth-child(3) {
+    width: 290px;
+  }
+  header nav ul :nth-child(4) {
+    width: 143.29px;
+  }
+  header nav ul :last-child {
+    width: 144.78px;
+  }
+}
+@media screen and (max-width: 980px) {
+  body .main > .bgvideo {
+    height: 450px;
+  }
+  body > header > nav {
+    padding: 0;
+  }
+  body > header > nav .burgerButton {
+    opacity: 1;
+  }
+  body > header > nav .bvLogo {
+    width: 290px;
+    height: 65px;
+    top: calc(50% - 32.5px);
+    left: calc(50% - 145px);
+    background: url(images/headerLogo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    display: block;
+  }
+  body > header > nav .bvLogo a {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+  .navBar {
+    display: none;
+  }
+  #burgerCheckbox:checked ~ .navBar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.85);
+  }
+  #burgerCheckbox:checked ~ .navBar > li {
+    padding: 0;
+    width: 100.73px;
+    height: 73px;
+  }
+  #burgerCheckbox:checked ~ .navBar > li > a {
+    padding: 25px 0;
+    font-size: 22px;
+    line-height: 23px;
+    position: relative;
+  }
+  #burgerCheckbox:checked ~ .navBar > li > a::before {
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: #CBAA54;
+  }
+  #burgerCheckbox:checked ~ .navBar > :last-child > a::before {
+    display: none;
+  }
+  #burgerCheckbox:checked ~ .navBar > :nth-child(3) {
+    display: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  body .main {
+    padding-top: 60px;
+  }
+  body > header {
+    height: 60px;
+  }
+  body > header > nav .burgerButton {
+    top: 23px;
+    left: 20px;
+  }
+  body > header > nav .bvLogo {
+    background-image: url(images/bvMinLogo.svg);
+    height: 22px;
+    width: 232px;
+    top: calc(50% - 11px);
+    left: calc(50% - 116px);
+  }
+}
+.main {
+  padding-top: 100px;
+}
+.main .bgvideo {
+  width: 100%;
+  height: 500px;
+}
+.main .bgvideo div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.main .bgvideo div video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.main .bgvideo div a {
+  margin: 0 auto;
+  width: 92px;
+  height: 92px;
+  border: 2px #EDCC72 solid;
+  border-radius: 50%;
+  display: block;
+  transition: border 0.4s ease;
+  position: relative;
+  top: calc(50% - 46px);
+}
+.main .bgvideo div a:hover {
+  border: 46px #EDCC72 solid;
+  transition: 0.4s ease;
+}
+.main .bgvideo div a:hover::before {
+  border-left: 28px solid black;
+  transition: 0.4s ease;
+}
+.main .bgvideo div ::before {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: calc(50% - 8px);
+  top: calc(50% - 14px);
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-left: 28px solid #EDCC72;
+  display: block;
+  content: "";
+}
+
+@media screen and (max-width: 980px) {
+  main .bgvideo {
+    height: 450px;
+  }
+}
+main {
+  width: 100%;
+  white-space: normal;
+}
+
+.whisky {
+  width: 100%;
+  background-image: url(images/whiskybg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+}
+.whisky div {
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 100px;
+  max-width: 1100px;
+}
+.whisky div h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 42px;
+  color: #fff;
+  line-height: 50px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+.whisky div .whiskyType {
+  padding: 0 0 100px 0;
+}
+.whisky div .whiskyType ul {
+  padding: 0 10px;
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+.whisky div .whiskyType ul li {
+  width: 20%;
+  padding: 80px 10px 0;
+}
+.whisky div .whiskyType ul a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.whisky div .whiskyType ul a:hover > div {
+  border-color: #CBAA54;
+  transition: border 0.4s ease;
+}
+.whisky div .whiskyType ul a:not(:hover) > div {
+  transition: 0.4s ease;
+}
+.whisky div .whiskyType ul a img {
+  margin: 0 auto;
+  width: auto;
+  height: 506px;
+  display: block;
+  position: relative;
+}
+.whisky div .whiskyType ul a div {
+  padding: 0 10px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #484232;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.whisky div .whiskyType ul a div span {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sectionDescr {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+.sectionDescr .description {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+.sectionDescr .description h2 {
+  margin: 0 auto 24px;
+  max-width: 780px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "PT Serif", serif;
+  background-color: black;
+  position: relative;
+}
+.sectionDescr .description h2::after {
+  content: "";
+  background: #CBAA54;
+  height: 1px;
+  width: 180px;
+  position: absolute;
+  left: calc(50% - 90px);
+  bottom: 0;
+}
+.sectionDescr .description div {
+  height: 108px;
+  width: 750px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  .whisky div {
+    padding-top: 80px;
+  }
+  .whisky div h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .whisky div .whiskyType {
+    padding-bottom: 80px;
+  }
+  .whisky div .whiskyType ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 70px;
+  }
+  .whisky div .whiskyType ul a img {
+    height: 400px;
+  }
+  .whisky div .whiskyType ul a div {
+    height: 54px;
+  }
+  .whisky div .whiskyType ul a div span {
+    font-size: 17px;
+  }
+  .sectionDescr .description h2 {
+    padding-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .sectionDescr .description h2::after {
+    width: 165px;
+    left: calc(50% - 82.5px);
+  }
+  .sectionDescr .description div {
+    font-size: 19px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .sectionDescr .description div {
+    width: auto;
+  }
+  .whisky > div {
+    padding: 60px 20px;
+  }
+  .whisky > div > h1 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .whisky > div > .whiskyType {
+    padding-bottom: 0;
+  }
+  .whisky > div > .whiskyType > ul {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .whisky > div > .whiskyType > ul > li {
+    width: 50%;
+    padding: 60px 10px 0 10px;
+    height: 440px;
+  }
+  .whisky > div > .whiskyType > ul > li > a > img {
+    height: 320px;
+  }
+  .whisky > div > .whiskyType > ul > li > a > div {
+    padding: 0 10px;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .whisky > div > .whiskyType > ul > li {
+    width: 100%;
+  }
+}
+footer {
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+footer div {
+  margin: 0 auto 40px;
+  height: 100px;
+  line-height: 0;
+  width: auto;
+}
+footer div img {
+  height: 100%;
+}
+footer .icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  height: 42px;
+}
+footer .icons li {
+  border-top: 1px solid #EDCC72;
+  border-bottom: 1px solid #EDCC72;
+  margin: 0;
+}
+footer .icons li:hover > a > i {
+  color: #EDCC72;
+  transition: 0.4s ease;
+}
+footer .icons li:not(:hover) > a > i {
+  transition: 0.4s ease;
+}
+footer .icons li a {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .icons li a i {
+  color: #fff;
+}
+footer .icons #facebook {
+  width: 39.15px;
+}
+footer .icons #facebook i {
+  width: 9.15px;
+}
+footer .icons #twitter {
+  width: 44.86px;
+}
+footer .icons #twitter i {
+  width: 14.86px;
+}
+footer .icons #instagram {
+  width: 43.73px;
+}
+footer .icons #instagram i {
+  width: 13.73px;
+}
+footer nav {
+  padding: 35px 0 30px;
+}
+footer nav .navigation {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+footer nav .navigation li {
+  margin: 0 7px;
+  border: none;
+}
+footer nav .navigation li a {
+  padding: 0 5px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+footer nav .navigation li a:hover {
+  color: #EDCC72;
+  transition: 0.4s ease;
+}
+footer nav .navigation li a:not(:hover) {
+  transition: 0.4s ease;
+}
+footer .logo {
+  height: 80px;
+  margin: 0 auto;
+}
+footer .logo a img {
+  height: 60px;
+  width: 80px;
+}
+footer .copyright {
+  color: #95989A;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "PT Serif", serif;
+  height: auto;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  body footer {
+    padding: 80px 40px;
+  }
+  body footer > :first-child {
+    margin: 0 auto 30px;
+    height: 90px;
+  }
+  body footer .footerNav {
+    padding: 30px 0 25px;
+  }
+  body footer .footerNav .navigation li {
+    margin: 0 5px;
+  }
+  body footer .footerNav .navigation li a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  body footer .copyright {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body footer {
+    padding: 60px 20px;
+  }
+  body footer > :first-child {
+    margin: 0 auto 25px;
+    height: 80px;
+  }
+  body footer .footerNav {
+    padding: 20px 0 15px;
+  }
+  body footer .footerNav .navigation li {
+    margin: 0 2px;
+  }
+  body footer .footerNav .navigation li a {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  body footer .copyright {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.heritage {
+  padding-top: 100px;
+  background: #000;
+}
+.heritage h2 {
+  margin-bottom: 24px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "PT Serif", serif;
+  position: relative;
+}
+.heritage h2::after {
+  content: "";
+  background: #CBAA54;
+  height: 1px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.heritage p {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "PT Serif", serif;
+  color: #fff;
+}
+.heritage .expertlyCrafted {
+  height: 500px;
+  width: 100%;
+  background-image: url(images/black-velvet-heritage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heritage .expertlyCrafted div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+}
+.heritage .expertlyCrafted div h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.heritage .ourHeritage {
+  width: 100%;
+}
+.heritage .ourHeritage > div {
+  display: flex;
+  justify-content: center;
+  padding: 100px 60px;
+  width: 100%;
+}
+.heritage .ourHeritage > div > :first-child {
+  padding-right: 30px;
+  width: 490px;
+}
+.heritage .ourHeritage > div > :nth-child(2) {
+  padding-left: 30px;
+  width: 490px;
+}
+.heritage .ourHeritage > div > :nth-child(2) > div {
+  background-image: url(images/ourHeritageImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 303.6px;
+}
+.heritage .whyHeritage {
+  width: 100%;
+}
+.heritage .whyHeritage > div {
+  display: flex;
+  justify-content: center;
+  padding: 100px 60px;
+  width: 100%;
+}
+.heritage .whyHeritage > div > :first-child {
+  padding-right: 30px;
+  width: 490px;
+}
+.heritage .whyHeritage > div > :first-child > div {
+  background-image: url(images/whyHeritage.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 303.6px;
+}
+.heritage .whyHeritage > div > :nth-child(2) {
+  padding-left: 30px;
+  width: 490px;
+}
+.heritage .whatHeritage {
+  width: 100%;
+}
+.heritage .whatHeritage > div {
+  display: flex;
+  justify-content: center;
+  padding: 100px 60px;
+  width: 100%;
+}
+.heritage .whatHeritage > div > :first-child {
+  padding-right: 30px;
+  width: 490px;
+}
+.heritage .whatHeritage > div > :nth-child(2) {
+  padding-left: 30px;
+  width: 490px;
+}
+.heritage .whatHeritage > div > :nth-child(2) > div {
+  background-image: url(images/whatHeritage.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 303.6px;
+}
+.heritage .whiskyHeritage {
+  width: 100%;
+}
+.heritage .whiskyHeritage > div {
+  display: flex;
+  justify-content: center;
+  padding: 100px 60px;
+  width: 100%;
+}
+.heritage .whiskyHeritage > div > :first-child {
+  padding-right: 30px;
+  width: 490px;
+}
+.heritage .whiskyHeritage > div > :first-child > div {
+  background-image: url(images/whiskyHeritage.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 303.6px;
+}
+.heritage .whiskyHeritage > div > :nth-child(2) {
+  padding-left: 30px;
+  width: 490px;
+}
+
+@media screen and (max-width: 980px) {
+  body .heritage .ourHeritage > div,
+  body .heritage .whatHeritage > div {
+    padding: 80px 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  body .heritage .ourHeritage > div > :first-child,
+  body .heritage .whatHeritage > div > :first-child {
+    order: 2;
+    padding: 0;
+    width: 70%;
+    margin-top: 60px;
+    position: relative;
+    left: 30%;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2,
+  body .heritage .whatHeritage > div > :first-child > h2 {
+    margin-bottom: 22px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2::after,
+  body .heritage .whatHeritage > div > :first-child > h2::after {
+    width: 165px;
+  }
+  body .heritage .ourHeritage > div > :first-child > div > p,
+  body .heritage .whatHeritage > div > :first-child > div > p {
+    font-size: 19px;
+    line-height: 32px;
+  }
+  body .heritage .ourHeritage > div > :nth-child(2),
+  body .heritage .whatHeritage > div > :nth-child(2) {
+    width: 70%;
+    padding: 0;
+    height: 415.8px;
+  }
+  body .heritage .ourHeritage > div > :nth-child(2) > div,
+  body .heritage .whatHeritage > div > :nth-child(2) > div {
+    height: 100%;
+  }
+  body .heritage .whyHeritage > div,
+  body .heritage .whiskyHeritage > div {
+    padding: 80px 40px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2),
+  body .heritage .whiskyHeritage > div > :nth-child(2) {
+    padding: 0;
+    width: 70%;
+    margin-top: 60px;
+    position: relative;
+    left: 30%;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2 {
+    margin-bottom: 22px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2::after,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2::after {
+    width: 165px;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > div > p,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > div > p {
+    font-size: 19px;
+    line-height: 32px;
+  }
+  body .heritage .whyHeritage > div > :first-child,
+  body .heritage .whiskyHeritage > div > :first-child {
+    width: 70%;
+    padding: 0;
+    height: 415.8px;
+  }
+  body .heritage .whyHeritage > div > :first-child > div,
+  body .heritage .whiskyHeritage > div > :first-child > div {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 760px) {
+  body .heritage {
+    padding-top: 60px;
+  }
+  body .heritage .ourHeritage > div,
+  body .heritage .whatHeritage > div {
+    padding: 60px 20px;
+  }
+  body .heritage .ourHeritage > div > :first-child,
+  body .heritage .whatHeritage > div > :first-child {
+    width: 75%;
+    left: 25%;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2,
+  body .heritage .whatHeritage > div > :first-child > h2 {
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2::after,
+  body .heritage .whatHeritage > div > :first-child > h2::after {
+    width: 150px;
+  }
+  body .heritage .ourHeritage > div > :first-child > div > p,
+  body .heritage .whatHeritage > div > :first-child > div > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  body .heritage .ourHeritage > div > :nth-child(2),
+  body .heritage .whatHeritage > div > :nth-child(2) {
+    width: 75%;
+    left: 25%;
+  }
+  body .heritage .whyHeritage > div,
+  body .heritage .whiskyHeritage > div {
+    padding: 60px 20pxt;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2),
+  body .heritage .whiskyHeritage > div > :nth-child(2) {
+    width: 75%;
+    left: 25%;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2 {
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2::after,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2::after {
+    width: 150px;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > div > p,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > div > p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  body .heritage .whyHeritage > div > :first-child,
+  body .heritage .whiskyHeritage > div > :first-child {
+    width: 75%;
+    left: 25%;
+  }
+}
+@media screen and (max-width: 540px) {
+  body .heritage .ourHeritage > div,
+  body .heritage .whatHeritage > div {
+    padding: 60px 20px;
+  }
+  body .heritage .ourHeritage > div > :first-child,
+  body .heritage .whatHeritage > div > :first-child {
+    width: 100%;
+    left: 0;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2,
+  body .heritage .whatHeritage > div > :first-child > h2 {
+    text-align: center;
+  }
+  body .heritage .ourHeritage > div > :first-child > h2::after,
+  body .heritage .whatHeritage > div > :first-child > h2::after {
+    left: calc(50% - 75px);
+  }
+  body .heritage .ourHeritage > div > :first-child > div > p,
+  body .heritage .whatHeritage > div > :first-child > div > p {
+    text-align: center;
+  }
+  body .heritage .ourHeritage > div > :nth-child(2),
+  body .heritage .whatHeritage > div > :nth-child(2) {
+    width: 100%;
+    left: 0;
+  }
+  body .heritage .whyHeritage > div,
+  body .heritage .whiskyHeritage > div {
+    padding: 60px 20px;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2),
+  body .heritage .whiskyHeritage > div > :nth-child(2) {
+    width: 100%;
+    left: 0;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2 {
+    text-align: center;
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > h2::after,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > h2::after {
+    left: calc(50% - 75px);
+  }
+  body .heritage .whyHeritage > div > :nth-child(2) > div > p,
+  body .heritage .whiskyHeritage > div > :nth-child(2) > div > p {
+    text-align: center;
+  }
+  body .heritage .whyHeritage > div > :first-child,
+  body .heritage .whiskyHeritage > div > :first-child {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .heritage .expertlyCrafted {
+    height: 450px;
+  }
+  .heritage .expertlyCrafted div h1 {
+    font-size: 43px;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .heritage .expertlyCrafted {
+    height: 400px;
+  }
+  .heritage .expertlyCrafted div h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+.whiskies > :nth-child(n+2) {
+  height: 500px;
+  width: 100%;
+}
+.whiskies > :nth-child(n+2) > div {
+  padding: 100px 60px;
+  width: 100%;
+}
+.whiskies > :nth-child(n+2) > div > div {
+  width: 480px;
+}
+.whiskies > :nth-child(n+2) > div > div > div {
+  font-family: "PT Serif", serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.whiskies > :nth-child(n+2) > div > div > a {
+  margin-top: 25px;
+  padding: 0 10px;
+  border: 1px solid #CBAA54;
+  height: 45px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.whiskies > :nth-child(n+2) > div > div > a:hover {
+  background-color: #CBAA54;
+  transition: 0.4s ease;
+}
+.whiskies > :nth-child(n+2) > div > div > a:hover > span {
+  color: black;
+  transition: 0.4s ease;
+}
+.whiskies > :nth-child(n+2) > div > div > a:not(:hover) {
+  transition: 0.4s ease;
+}
+.whiskies > :nth-child(n+2) > div > div > a:not(:hover) > span {
+  transition: 0.4s ease;
+}
+.whiskies > :nth-child(n+2) > div > div > a > span {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 16px;
+}
+.whiskies > :nth-child(n+2) h2 {
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.whiskies > :nth-child(n+2) h2::after {
+  content: "";
+  background: #CBAA54;
+  height: 1px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.whiskies .blackVelvetWhiskies {
+  padding-top: 100px;
+}
+.whiskies .blackVelvetWhiskies > div {
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/blackVelvesWhiskies.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 250px;
+}
+.whiskies .blackVelvetWhiskies > div > h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.whiskies .blackVelvetOriginal {
+  position: relative;
+  overflow: hidden;
+}
+.whiskies .blackVelvetOriginal > div {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(images/blackVelvetOriginal.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 145%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.whiskies .blackVelvetReserve {
+  position: relative;
+  overflow: hidden;
+}
+.whiskies .blackVelvetReserve > div {
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(images/blackVelvetReserve.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 145%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+.whiskies .blackVelvetToasted {
+  position: relative;
+  overflow: hidden;
+}
+.whiskies .blackVelvetToasted > div {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(images/blackVelvetToasted.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 145%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+.whiskies .blackVelvetApple {
+  position: relative;
+  overflow: hidden;
+}
+.whiskies .blackVelvetApple > div {
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(images/blackVelvetApple.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 145%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+.whiskies .blackVelvetPeach {
+  position: relative;
+  overflow: hidden;
+}
+.whiskies .blackVelvetPeach > div {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url(images/blackVelvetPeach.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 145%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  body > .whiskies .blackVelvetWhiskies > div {
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/blackVelvesWhiskies.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+  }
+  body > .whiskies .blackVelvetWhiskies > div > h2 {
+    font-size: 43px;
+    line-height: 48px;
+  }
+  body > .whiskies > :nth-child(n+2) {
+    height: 450px;
+  }
+  body > .whiskies > :nth-child(n+2) > div {
+    padding: 80px 40px;
+  }
+  body > .whiskies > :nth-child(n+2) > div > div {
+    max-width: 380px;
+  }
+  body > .whiskies > :nth-child(n+2) h2 {
+    margin-bottom: 17px;
+    padding-bottom: 15px;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  body > .whiskies > :nth-child(n+2) h2::after {
+    width: 165px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body > .whiskies .blackVelvetWhiskies {
+    padding-top: 60px;
+  }
+  body > .whiskies .blackVelvetWhiskies > div {
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/blackVelvesWhiskies.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+  }
+  body > .whiskies .blackVelvetWhiskies > div > h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  body > .whiskies .blackVelvetWhiskies > div > h2::after {
+    width: 150px;
+  }
+  body > .whiskies > :nth-child(n+2) {
+    height: 400px;
+  }
+  body > .whiskies > :nth-child(n+2) > div {
+    padding: 60px 20px;
+  }
+  body > .whiskies > :nth-child(n+2) > div > div {
+    max-width: 200px;
+  }
+  body > .whiskies > :nth-child(n+2) h2 {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+  body > .whiskies > :nth-child(n+2) h2::after {
+    width: 150px;
+  }
+  body > .whiskies .blackVelvetOriginal > div {
+    justify-content: flex-start;
+    width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetReserve > div {
+    justify-content: flex-start;
+    width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetToasted > div {
+    justify-content: flex-start;
+    width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetApple > div {
+    justify-content: flex-start;
+    width: 155%;
+    left: 0;
+  }
+  body > .whiskies .blackVelvetPeach > div {
+    justify-content: flex-start;
+    width: 155%;
+    left: 0;
+  }
+}
+.drinks {
+  padding-top: 100px;
+}
+.drinks .lets_drink {
+  width: 100%;
+  height: 500px;
+}
+.drinks .lets_drink div {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/blackVelvetDrinks.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drinks .lets_drink div h1 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 54px;
+  line-height: 60px;
+  color: #fff;
+}
+.drinks .drinksFlex {
+  width: 100%;
+  background-color: black;
+}
+.drinks .drinksFlex #blackVelvetCola {
+  background-image: url(images/drinks/blackVelvetAndCola.png);
+}
+.drinks .drinksFlex #peachLemonadeSmash {
+  background-image: url(images/drinks/peachLemonadeSmash.png);
+}
+.drinks .drinksFlex #canadianPeachTea {
+  background-image: url(images/drinks/canadianPeachTea.png);
+}
+.drinks .drinksFlex #capeBreton {
+  background-image: url(images/drinks/capeBreton.png);
+}
+.drinks .drinksFlex #thePeachVelvet {
+  background-image: url(images/drinks/thePeachVelvet.png);
+}
+.drinks .drinksFlex #blackVelvetSour {
+  background-image: url(images/drinks/blackVelvetSour.png);
+}
+.drinks .drinksFlex #canadianMountyMule {
+  background-image: url(images/drinks/canadianMountyMule.png);
+}
+.drinks .drinksFlex #hotAppleToddy {
+  background-image: url(images/drinks/hotAppleToddy.png);
+}
+.drinks .drinksFlex #oldmanOldFashioned {
+  background-image: url(images/drinks/oldmanOldFashioned.png);
+}
+.drinks .drinksFlex #canadianApple {
+  background-image: url(images/drinks/canadianApple.png);
+}
+.drinks .drinksFlex #blackJulep {
+  background-image: url(images/drinks/blackJulep.png);
+}
+.drinks .drinksFlex #velvetMonkey {
+  background-image: url(images/drinks/velvetMonkey.png);
+}
+.drinks .drinksFlex #velvetGinger {
+  background-image: url(images/drinks/velvetGinger.png);
+}
+.drinks .drinksFlex #redVelvet {
+  background-image: url(images/drinks/redVelvet.png);
+}
+.drinks .drinksFlex #coolVelvet {
+  background-image: url(images/drinks/coolVelvet.png);
+}
+.drinks .drinksFlex #spikedSouthernTea {
+  background-image: url(images/drinks/spikedSouthernTea.png);
+}
+.drinks .drinksFlex #spicedEggnog {
+  background-image: url(images/drinks/spicedEggnog.png);
+}
+.drinks .drinksFlex #canadianCider {
+  background-image: url(images/drinks/canadianCider.png);
+}
+.drinks .drinksFlex #caramelMojito {
+  background-image: url(images/drinks/caramelMojito.png);
+}
+.drinks .drinksFlex #caramelMudslide {
+  background-image: url(images/drinks/caramelMudslide.png);
+}
+.drinks .drinksFlex #caramelApple {
+  background-image: url(images/drinks/caramelApple.png);
+}
+.drinks .drinksFlex #caramelLibre {
+  background-image: url(images/drinks/caramelLibre.png);
+}
+.drinks .drinksFlex #kingCube {
+  background-image: url(images/drinks/kingCube.png);
+}
+.drinks .drinksFlex #chiledShot {
+  background-image: url(images/drinks/chiledShot.png);
+}
+.drinks .drinksFlex #velvetManhattan {
+  background-image: url(images/drinks/velvetManhattan.png);
+}
+.drinks .drinksFlex > div {
+  padding: 80px 60px 80px 40px;
+}
+.drinks .drinksFlex > div > div {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+.drinks .drinksFlex > div > div > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.drinks .drinksFlex > div > div > div > div {
+  padding: 20px 0 0 20px;
+  width: 25%;
+  overflow: hidden;
+}
+.drinks .drinksFlex > div > div > div > div a {
+  height: 406px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+}
+.drinks .drinksFlex > div > div > div > div a > :first-child {
+  position: absolute;
+  width: 435px;
+  top: 70px;
+  left: calc(50% - 217.5px);
+  font-family: "PT Serif", serif;
+  color: #000;
+  font-size: 80px;
+  line-height: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+.drinks .drinksFlex > div > div > div > div a > :nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 70px);
+  bottom: 70px;
+  background-position: center;
+  background-size: cover;
+}
+.drinks .drinksFlex > div > div > div > div a > :nth-child(3) {
+  width: calc(100% - 20px);
+  height: 60px;
+  padding: 0 15px;
+  border: 1px solid #484232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: black;
+}
+.drinks .drinksFlex > div > div > div > div a > :nth-child(3) > span {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 500;
+  text-align: center;
+}
+.drinks .drinksFlex > div > div > div > div a:hover > :nth-child(1) {
+  scale: 0.9;
+  transition: scale 0.8s ease;
+}
+.drinks .drinksFlex > div > div > div > div a:not(:hover) > :nth-child(1) {
+  transition: 0.8s ease;
+}
+.drinks .drinksFlex > div > div > div > div a:hover > :nth-child(3) {
+  border-color: #CBAA54;
+  transition: border 0.4s ease;
+}
+.drinks .drinksFlex > div > div > div > div a:not(:hover) > :nth-child(3) {
+  transition: 0.4s ease;
+}
+
+@media screen and (max-width: 980px) {
+  .drinks .lets_drink {
+    height: 450px;
+  }
+  .drinks .lets_drink div h1 {
+    font-size: 43px;
+    line-height: 48px;
+  }
+  .drinks .drinksFlex > div {
+    padding: 40px 40px 80px 20px;
+  }
+  .drinks .drinksFlex > div > div {
+    max-width: 580px;
+  }
+  .drinks .drinksFlex > div > div > div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .drinks .drinksFlex > div > div > div > div {
+    padding: 20px 0 0 20px;
+    width: 50%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 760px) {
+  .drinks {
+    padding-top: 60px;
+  }
+  .drinks .lets_drink {
+    height: 400px;
+  }
+  .drinks .lets_drink div h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .drinks .drinksFlex > div > div {
+    max-width: 280px;
+  }
+  .drinks .drinksFlex > div > div > div > div {
+    width: 100%;
+  }
+}
+.original {
+  padding-top: 100px;
+}
+.original > :first-child > div {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/bv-original.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.original > :first-child > div > div {
+  padding: 100px 60px;
+  width: 980px;
+}
+.original > :first-child > div > div > h1 {
+  text-align: left;
+  max-width: 550px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.original > :nth-child(2) {
+  width: 100%;
+  background-image: url(images/whiskybg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  height: 980px;
+}
+.original > :nth-child(2) > div {
+  padding: 100px 60px 50px 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.original > :nth-child(2) > div > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 980px;
+  height: 100%;
+}
+.original > :nth-child(2) > div > div > :first-child {
+  background-image: url(images/1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > h2 {
+  margin-bottom: 24px;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "PT Serif", serif;
+  position: relative;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > h2::after {
+  content: "";
+  background: #CBAA54;
+  height: 1px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(2) {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "PT Serif", serif;
+  color: #fff;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) {
+  width: 100%;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a {
+  margin-top: 25px;
+  padding: 0 10px;
+  height: 45px;
+  width: 120px;
+  line-height: 26px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #CBAA54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a:hover {
+  background-color: #CBAA54;
+  transition: 0.4s ease;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a:hover > span {
+  color: black;
+  transition: 0.4s ease;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a:not(:hover) {
+  transition: 0.4s ease;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a:not(:hover) > span {
+  transition: 0.4s ease;
+}
+.original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a > span {
+  text-align: center;
+}
+.original > :nth-child(3) {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.original > :nth-child(3) #blackVelvetCola {
+  background-image: url(images/drinks/blackVelvetAndCola.png);
+}
+.original > :nth-child(3) #peachLemonadeSmash {
+  background-image: url(images/drinks/peachLemonadeSmash.png);
+}
+.original > :nth-child(3) #canadianPeachTea {
+  background-image: url(images/drinks/canadianPeachTea.png);
+}
+.original > :nth-child(3) #capeBreton {
+  background-image: url(images/drinks/capeBreton.png);
+}
+.original > :nth-child(3) #thePeachVelvet {
+  background-image: url(images/drinks/thePeachVelvet.png);
+}
+.original > :nth-child(3) #blackVelvetSour {
+  background-image: url(images/drinks/blackVelvetSour.png);
+}
+.original > :nth-child(3) #canadianMountyMule {
+  background-image: url(images/drinks/canadianMountyMule.png);
+}
+.original > :nth-child(3) #hotAppleToddy {
+  background-image: url(images/drinks/hotAppleToddy.png);
+}
+.original > :nth-child(3) #oldmanOldFashioned {
+  background-image: url(images/drinks/oldmanOldFashioned.png);
+}
+.original > :nth-child(3) #canadianApple {
+  background-image: url(images/drinks/canadianApple.png);
+}
+.original > :nth-child(3) #blackJulep {
+  background-image: url(images/drinks/blackJulep.png);
+}
+.original > :nth-child(3) #velvetMonkey {
+  background-image: url(images/drinks/velvetMonkey.png);
+}
+.original > :nth-child(3) #velvetGinger {
+  background-image: url(images/drinks/velvetGinger.png);
+}
+.original > :nth-child(3) #redVelvet {
+  background-image: url(images/drinks/redVelvet.png);
+}
+.original > :nth-child(3) #coolVelvet {
+  background-image: url(images/drinks/coolVelvet.png);
+}
+.original > :nth-child(3) #spikedSouthernTea {
+  background-image: url(images/drinks/spikedSouthernTea.png);
+}
+.original > :nth-child(3) #spicedEggnog {
+  background-image: url(images/drinks/spicedEggnog.png);
+}
+.original > :nth-child(3) #canadianCider {
+  background-image: url(images/drinks/canadianCider.png);
+}
+.original > :nth-child(3) #caramelMojito {
+  background-image: url(images/drinks/caramelMojito.png);
+}
+.original > :nth-child(3) #caramelMudslide {
+  background-image: url(images/drinks/caramelMudslide.png);
+}
+.original > :nth-child(3) #caramelApple {
+  background-image: url(images/drinks/caramelApple.png);
+}
+.original > :nth-child(3) #caramelLibre {
+  background-image: url(images/drinks/caramelLibre.png);
+}
+.original > :nth-child(3) #kingCube {
+  background-image: url(images/drinks/kingCube.png);
+}
+.original > :nth-child(3) #chiledShot {
+  background-image: url(images/drinks/chiledShot.png);
+}
+.original > :nth-child(3) #velvetManhattan {
+  background-image: url(images/drinks/velvetManhattan.png);
+}
+.original > :nth-child(3) > div {
+  max-width: 1300px;
+  padding: 100px 60px;
+  margin: 0 auto;
+}
+.original > :nth-child(3) > div > :first-child > h2 {
+  margin: 0 auto 24px;
+  max-width: 780px;
+  text-align: center;
+  padding-bottom: 30px;
+  color: #fff;
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "PT Serif", serif;
+  color: #fff;
+  position: relative;
+}
+.original > :nth-child(3) > div > :first-child > h2::after {
+  content: "";
+  background: #CBAA54;
+  height: 1px;
+  width: 180px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 90px);
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) {
+  padding: 26px 0;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px 0 0 -20px;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div {
+  padding: 20px 0 0 20px;
+  width: 25%;
+  overflow: hidden;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a {
+  height: 406px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: rgb(25, 25, 25);
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a > :first-child {
+  position: absolute;
+  max-width: 435px;
+  top: 70px;
+  left: calc(50% - 217.5px);
+  font-family: "PT Serif", serif;
+  color: #000;
+  font-size: 80px;
+  line-height: 70px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a > :nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 70px);
+  bottom: 70px;
+  background-position: center;
+  background-size: cover;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a > :nth-child(3) {
+  width: calc(100% - 20px);
+  height: 60px;
+  padding: 0 15px;
+  border: 1px solid #484232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: black;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a > :nth-child(3) > span {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 21px;
+  font-weight: 500;
+  text-align: center;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a:hover > :nth-child(1) {
+  scale: 0.9;
+  transition: scale 0.8s ease;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a:not(:hover) > :nth-child(1) {
+  transition: 0.8s ease;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a:hover > :nth-child(3) {
+  border-color: #CBAA54;
+  transition: border 0.4s ease;
+}
+.original > :nth-child(3) > div > :first-child > :nth-child(2) > div a:not(:hover) > :nth-child(3) {
+  transition: 0.4s ease;
+}
+.original > :nth-child(3) > div > :nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a {
+  margin-top: 25px;
+  padding: 0 10px;
+  height: 45px;
+  line-height: 26px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #CBAA54;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a:hover {
+  background-color: #CBAA54;
+  transition: 0.4s ease;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a:hover > span {
+  color: black;
+  transition: 0.4s ease;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a:not(:hover) {
+  transition: 0.4s ease;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a:not(:hover) > span {
+  transition: 0.4s ease;
+}
+.original > :nth-child(3) > div > :nth-child(2) > a > span {
+  text-align: center;
+}
+.original > :nth-child(4) {
+  background-color: black;
+}
+.original > :nth-child(4) > div {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.original > :nth-child(4) > div > a {
+  width: 250px;
+  padding: 40px 40px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 21px;
+}
+.original > :nth-child(4) > div > a::before {
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 5.5px);
+  content: "";
+  background-image: url(images/btnIcon.svg);
+}
+.original > :nth-child(4) > div > a:hover::before {
+  transform: rotate(90deg);
+  transition: 0.4s ease;
+}
+.original > :nth-child(4) > div > a:hover {
+  transition: 0.4s ease;
+  color: rgb(237, 204, 114);
+}
+.original > :nth-child(4) > div > a:not(:hover) {
+  transition: 0.4s ease;
+}
+.original > :nth-child(4) > div > a:not(:hover)::before {
+  transition: 0.4s ease;
+}
+.original > :nth-child(4) > div > :nth-child(2) {
+  border-left: 1px solid #CBAA54;
+}
+
+@media screen and (max-width: 980px) {
+  body .original > :first-child > div {
+    height: 300px;
+  }
+  body .original > :first-child > div > div {
+    padding: 80px 40px;
+  }
+  body .original > :first-child > div > div > h1 {
+    max-width: 500px;
+    font-size: 43px;
+    line-height: 48px;
+  }
+  body .original > :nth-child(2) {
+    height: 680px;
+  }
+  body .original > :nth-child(2) > div {
+    padding: 80px 40px 50px 40px;
+    height: 100%;
+  }
+  body .original > :nth-child(2) > div > div {
+    max-width: 980px;
+  }
+  body .original > :nth-child(2) > div > div > :first-child {
+    background-size: contain;
+  }
+  body .original > :nth-child(2) > div > div > :nth-child(2) > div > h2 {
+    margin-bottom: 22px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body .original > :nth-child(2) > div > div > :nth-child(2) > div > h2::after {
+    width: 165px;
+  }
+  body .original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(2) {
+    font-size: 19px;
+    line-height: 32px;
+  }
+  body .original > :nth-child(3) > div {
+    padding: 80px 40px;
+  }
+  body .original > :nth-child(3) > div > :first-child > h2 {
+    padding-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  body .original > :nth-child(3) > div > :first-child > h2::after {
+    width: 165px;
+    left: calc(50% - 82.5px);
+  }
+  body .original > :nth-child(3) > div > :first-child > :nth-child(2) {
+    padding: 16px 0 15px;
+    max-width: 580px;
+  }
+  body .original > :nth-child(3) > div > :first-child > :nth-child(2) > div {
+    padding: 20px 0 0 20px;
+    width: 50%;
+  }
+  body .original > :nth-child(4) > div > a {
+    padding: 30px 30px 15px;
+    width: 195px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  body .original > :nth-child(4) > div > a::before {
+    top: 15px;
+  }
+}
+@media screen and (max-width: 760px) {
+  body > .original {
+    padding-top: 60px;
+  }
+  body > .original > :first-child > div {
+    height: 800px;
+    background-image: url(images/bv-original-mobile.jpg);
+  }
+  body > .original > :first-child > div > div {
+    padding: 60px 20px;
+  }
+  body > .original > :first-child > div > div > h1 {
+    max-width: 400px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+  body > .original > :nth-child(2) > div {
+    padding: 60px 20px 50px 20px;
+  }
+  body > .original > :nth-child(2) > div > div {
+    max-width: 980px;
+    flex-direction: column;
+    flex-wrap: unset;
+    justify-content: flex-start;
+  }
+  body > .original > :nth-child(2) > div > div > :first-child {
+    background-size: contain;
+    height: 400px;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) {
+    height: calc(100% - 400px);
+    width: 100%;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > h2 {
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > h2::after {
+    width: 150px;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(2) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  body > .original > :nth-child(3) > div {
+    padding: 60px 20px;
+  }
+  body > .original > :nth-child(3) > div > :first-child > h2 {
+    padding-bottom: 20px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  body > .original > :nth-child(3) > div > :first-child > h2::after {
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+  body > .original > :nth-child(3) > div > :first-child > :nth-child(2) {
+    padding: 12px 0 5px;
+    max-width: 580px;
+  }
+  body > .original > :nth-child(3) > div > :first-child > :nth-child(2) > div {
+    padding: 20px 0 0 20px;
+    width: 50%;
+  }
+  body > .original > :nth-child(4) > div > a {
+    padding: 20px 20px 10px;
+    width: 140px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  body > .original > :nth-child(4) > div > a::before {
+    top: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  body > .original > :first-child > div {
+    height: 500px;
+    background-position: unset;
+  }
+  body > .original > :first-child > div > div > h1 {
+    max-width: 300px;
+    font-size: 25px;
+    padding-bottom: 30px;
+    line-height: 1.2em;
+  }
+  body > .original > :nth-child(2) {
+    height: 660px;
+  }
+  body > .original > :nth-child(2) > div > div > :first-child {
+    background-size: contain;
+    height: 300px;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) {
+    height: calc(100% - 300px);
+    width: 100%;
+    text-align: center;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > h2::after {
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(2) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  body > .original > :nth-child(2) > div > div > :nth-child(2) > div > :nth-child(3) > a {
+    margin: 25px auto 0;
+  }
+  body > .original > :nth-child(3) > div > :first-child > h2::after {
+    width: 150px;
+    left: calc(50% - 75px);
+  }
+  body > .original > :nth-child(3) > div > :first-child > :nth-child(2) {
+    padding: 12px 0 5px;
+    max-width: 280px;
+  }
+  body > .original > :nth-child(3) > div > :first-child > :nth-child(2) > div {
+    padding: 20px 0 0 20px;
+    width: 100%;
+  }
+  body > .original > :nth-child(4) > div > a {
+    padding: 20px 20px 10px;
+    width: 140px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  body > .original > :nth-child(4) > div > a::before {
+    top: 10px;
+  }
+}
+body .original > :first-child .reserveBackground {
+  background-image: url(images/bv-reserve.jpg);
+}
+body .original > :nth-child(2) > div > div .reserveBottle {
+  background-image: url(images/2.png);
+}
+
+@media screen and (max-width: 760px) {
+  body .original > :first-child .reserveBackground {
+    background-image: url(images/bv-reserve-mobile.jpg);
+    background-position: center;
+  }
+}
+body .original > :first-child .toastedCaramelBackground {
+  background-image: url(images/bv-toasted-caramel.jpg);
+}
+body .original > :nth-child(2) > div > div .toastedCaramelBottle {
+  background-image: url(images/3.png);
+}
+
+@media screen and (max-width: 760px) {
+  body .original > :first-child .toastedCaramelBackground {
+    background-image: url(images/bv-toasted-caramel-mobile.jpg);
+    background-position: center;
+  }
+}
+body .original > :first-child .appleBackground {
+  background-image: url(images/bv-apple.jpg);
+}
+body .original > :nth-child(2) > div > div .appleBottle {
+  background-image: url(images/4.png);
+}
+
+@media screen and (max-width: 760px) {
+  body .original > :first-child .appleBackground {
+    background-image: url(images/bv-apple-mobile.jpg);
+    background-position: center;
+  }
+}
+body .original > :first-child .peachBackground {
+  background-image: url(images/bv-peach.png);
+}
+body .original > :nth-child(2) > div > div .peachBottle {
+  background-image: url(images/5.png);
+}
+
+@media screen and (max-width: 760px) {
+  body .original > :first-child .peachBackground {
+    background-image: url(images/bv-peach-mobile.png);
+    background-position: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

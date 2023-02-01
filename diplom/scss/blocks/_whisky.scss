@@ -1,0 +1,276 @@
+main {
+    width: 100%;
+    white-space: normal;
+}
+
+.whisky {
+    width: 100%;
+    background-image: url(images/whiskybg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+
+    div {
+        margin: 0 auto;
+        width: 100%;
+        padding-top: 100px;
+        max-width: 1100px;
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 42px;
+            color: #fff;
+            line-height: 50px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .whiskyType {
+            padding: 0 0 100px 0;
+
+            ul {
+                padding: 0 10px;
+                display: flex;
+                list-style-type: none;
+                width: 100%;
+
+                li {
+                    width: 20%;
+                    padding: 80px 10px 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    display: block;
+                    width: 100%;
+
+                    &:hover>div {
+                        border-color: #CBAA54;
+                        transition: border .4s ease;
+                    }
+
+                    &:not(:hover)>div {
+                        transition: .4s ease;
+                    }
+
+                    img {
+                        margin: 0 auto;
+                        width: auto;
+                        height: 506px;
+                        display: block;
+                        position: relative;
+                    }
+
+                    div {
+                        padding: 0 10px;
+                        width: 100%;
+                        height: 60px;
+                        border: 1px solid #484232;
+                        background: #000;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        span {
+                            font-family: 'Oswald', sans-serif;
+                            color: #fff;
+                            font-size: 20px;
+                            line-height: 21px;
+                            font-weight: 500;
+                            text-align: center;
+
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.sectionDescr {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    padding-bottom: 80px;
+
+    .description {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            margin: 0 auto 24px;
+            max-width: 780px;
+            padding-bottom: 30px;
+            color: #fff;
+            font-size: 28px;
+            line-height: 30px;
+            font-weight: 400;
+            font-family: 'PT Serif', serif;
+            background-color: black;
+            position: relative;
+
+            &::after {
+                content: "";
+                background: #CBAA54;
+                height: 1px;
+                width: 180px;
+                position: absolute;
+                left: calc(50% - 90px);
+                bottom: 0;
+            }
+        }
+
+        div {
+            height: 108px;
+            width: 750px;
+            margin: 0 auto;
+            color: #fff;
+            font-family: 'PT Serif', serif;
+            font-size: 20px;
+            line-height: 36px;
+            font-weight: 400;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .whisky {
+        div {
+            padding-top: 80px;
+
+            h1 {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .whiskyType {
+                padding-bottom: 80px;
+
+
+                ul {
+
+                    li {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-top: 70px;
+                    }
+
+                    a {
+                        img {
+                            height: 400px;
+                        }
+
+                        div {
+
+                            height: 54px;
+
+
+
+                            span {
+                                font-size: 17px;
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .sectionDescr {
+
+        .description {
+            h2 {
+                padding-bottom: 25px;
+                font-size: 24px;
+                line-height: 28px;
+
+                &::after {
+                    width: 165px;
+                    left: calc(50% - 82.5px);
+                }
+            }
+
+            div {
+                font-size: 19px;
+                line-height: 32px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .sectionDescr {
+        .description {
+            div {
+                width: auto;
+
+            }
+        }
+    }
+
+    .whisky {
+        >div {
+            padding: 60px 20px;
+
+            >h1 {
+                font-size: 22px;
+                line-height: 30px;
+            }
+
+            >.whiskyType {
+
+                padding-bottom: 0;
+
+                >ul {
+                    flex-wrap: wrap;
+                    padding: 0;
+
+                    >li {
+                        width: 50%;
+                        padding: 60px 10px 0 10px;
+                        height: 440px;
+
+                        >a {
+                            >img {
+                                height: 320px;
+                            }
+
+                            >div {
+                                padding: 0 10px;
+                                width: 180px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .whisky {
+        >div {
+            >.whiskyType {
+                >ul {
+                    >li {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

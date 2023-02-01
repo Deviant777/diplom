@@ -1,0 +1,198 @@
+footer {
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    div {
+        margin: 0 auto 40px;
+        height: 100px;
+        line-height: 0;
+        width: auto;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .icons {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        height: 42px;
+
+        li {
+            border-top: 1px solid $gold_bgvideo;
+            border-bottom: 1px solid $gold_bgvideo;
+            margin: 0;
+
+            &:hover>a>i {
+                color: $gold_bgvideo;
+                transition: .4s ease;
+            }
+
+            &:not(:hover)>a>i {
+                transition: .4s ease;
+            }
+
+            a {
+                padding: 10px 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+
+        #facebook {
+            width: 39.15px;
+
+            i {
+                width: 9.15px;
+            }
+        }
+
+        #twitter {
+            width: 44.86px;
+
+            i {
+                width: 14.86px;
+            }
+        }
+
+        #instagram {
+            width: 43.73px;
+
+            i {
+                width: 13.73px;
+            }
+        }
+    }
+
+    nav {
+        padding: 35px 0 30px;
+
+        .navigation {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            li {
+                margin: 0 7px;
+                border: none;
+
+                a {
+                    padding: 0 5px;
+                    font-family: 'Oswald', sans-serif;
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 26px;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: $gold_bgvideo;
+                        transition: .4s ease;
+                    }
+
+                    &:not(:hover) {
+                        transition: .4s ease;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        height: 80px;
+        margin: 0 auto;
+
+        a {
+            img {
+                height: 60px;
+                width: 80px;
+            }
+        }
+    }
+
+    .copyright {
+        color: #95989A;
+        font-size: 16px;
+        line-height: 26px;
+        font-family: 'PT Serif', serif;
+        height: auto;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        footer {
+            padding: 80px 40px;
+
+            >:first-child {
+                margin: 0 auto 30px;
+                height: 90px;
+            }
+
+            .footerNav {
+                padding: 30px 0 25px;
+
+                .navigation {
+                    li {
+                        margin: 0 5px;
+
+                        a {
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        footer {
+            padding: 60px 20px;
+
+            >:first-child {
+                margin: 0 auto 25px;
+                height: 80px;
+            }
+
+            .footerNav {
+                padding: 20px 0 15px;
+
+                .navigation {
+                    li {
+                        margin: 0 2px;
+
+                        a {
+                            font-size: 12px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+}

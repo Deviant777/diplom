@@ -1,0 +1,31 @@
+body {
+    .original {
+        >:first-child {
+            .toastedCaramelBackground {
+                background-image: url(images/bv-toasted-caramel.jpg);
+            }
+        }
+        >:nth-child(2){
+            >div{
+                >div{
+                    .toastedCaramelBottle {
+                        background-image: url(images/3.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    body {
+        .original {
+            >:first-child {
+                .toastedCaramelBackground {
+                    background-image: url(images/bv-toasted-caramel-mobile.jpg);
+                    background-position: center;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,299 @@
+.drinks {
+    padding-top: 100px;
+
+    .lets_drink {
+        width: 100%;
+        height: 500px;
+
+        div {
+            height: 100%;
+            width: 100%;
+            background-image: url(images/blackVelvetDrinks.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                text-transform: uppercase;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 54px;
+                line-height: 60px;
+                color: #fff;
+            }
+        }
+    }
+
+    .drinksFlex {
+        width: 100%;
+        background-color: black;
+
+        #blackVelvetCola {
+            background-image: url(images/drinks/blackVelvetAndCola.png);
+        }
+
+        #peachLemonadeSmash {
+            background-image: url(images/drinks/peachLemonadeSmash.png);
+        }
+
+        #canadianPeachTea {
+            background-image: url(images/drinks/canadianPeachTea.png);
+        }
+
+        #capeBreton {
+            background-image: url(images/drinks/capeBreton.png);
+        }
+
+        #thePeachVelvet {
+            background-image: url(images/drinks/thePeachVelvet.png);
+        }
+
+        #blackVelvetSour {
+            background-image: url(images/drinks/blackVelvetSour.png);
+        }
+
+        #canadianMountyMule {
+            background-image: url(images/drinks/canadianMountyMule.png);
+        }
+
+        #hotAppleToddy {
+            background-image: url(images/drinks/hotAppleToddy.png);
+        }
+
+        #oldmanOldFashioned {
+            background-image: url(images/drinks/oldmanOldFashioned.png);
+        }
+
+        #canadianApple {
+            background-image: url(images/drinks/canadianApple.png);
+        }
+
+        #blackJulep {
+            background-image: url(images/drinks/blackJulep.png);
+        }
+
+        #velvetMonkey {
+            background-image: url(images/drinks/velvetMonkey.png);
+        }
+
+        #velvetGinger {
+            background-image: url(images/drinks/velvetGinger.png);
+        }
+
+        #redVelvet {
+            background-image: url(images/drinks/redVelvet.png);
+        }
+
+        #coolVelvet {
+            background-image: url(images/drinks/coolVelvet.png);
+        }
+
+        #spikedSouthernTea {
+            background-image: url(images/drinks/spikedSouthernTea.png);
+        }
+
+        #spicedEggnog {
+            background-image: url(images/drinks/spicedEggnog.png);
+        }
+
+        #canadianCider {
+            background-image: url(images/drinks/canadianCider.png);
+        }
+
+        #caramelMojito {
+            background-image: url(images/drinks/caramelMojito.png);
+        }
+
+        #caramelMudslide {
+            background-image: url(images/drinks/caramelMudslide.png);
+        }
+
+        #caramelApple {
+            background-image: url(images/drinks/caramelApple.png);
+        }
+
+        #caramelLibre {
+            background-image: url(images/drinks/caramelLibre.png);
+        }
+
+        #kingCube {
+            background-image: url(images/drinks/kingCube.png);
+        }
+
+        #chiledShot {
+            background-image: url(images/drinks/chiledShot.png);
+        }
+
+        #velvetManhattan {
+            background-image: url(images/drinks/velvetManhattan.png);
+        }
+
+        >div {
+            padding: 80px 60px 80px 40px;
+
+            >div {
+                max-width: 1180px;
+                margin: 0 auto;
+
+                >div {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >div {
+                        padding: 20px 0 0 20px;
+                        width: 25%;
+                        overflow: hidden;
+
+                        a {
+                            height: 406px;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            position: relative;
+                            width: 100%;
+                            background-color: rgb(25, 25, 25);
+
+                            >:first-child {
+                                position: absolute;
+                                width: 435px;
+                                top: 70px;
+                                left: calc(50% - 217.5px);
+                                font-family: 'PT Serif', serif;
+                                color: #000;
+                                font-size: 80px;
+                                line-height: 70px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+
+                            >:nth-child(2) {
+                                position: absolute;
+                                width: 100%;
+                                height: calc(100% - 70px);
+                                bottom: 70px;
+                                background-position: center;
+                                background-size: cover;
+                            }
+
+                            >:nth-child(3) {
+                                width: calc(100% - 20px);
+                                height: 60px;
+                                padding: 0 15px;
+                                border: 1px solid #484232;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-bottom: 10px;
+                                background-color: black;
+
+                                >span {
+                                    font-family: 'Oswald', sans-serif;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    line-height: 21px;
+                                    font-weight: 500;
+                                    text-align: center;
+                                }
+                            }
+
+                            &:hover>:nth-child(1) {
+                                scale: 0.9;
+                                transition: scale .8s ease;
+                            }
+
+                            &:not(:hover)>:nth-child(1) {
+                                transition: .8s ease;
+                            }
+
+                            &:hover>:nth-child(3) {
+                                border-color: #CBAA54;
+                                transition: border .4s ease;
+                            }
+
+                            &:not(:hover)>:nth-child(3) {
+                                transition: .4s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .drinks {
+        .lets_drink {
+            height: 450px;
+
+            div {
+                h1 {
+                    font-size: 43px;
+                    line-height: 48px;
+                }
+            }
+        }
+
+        .drinksFlex {
+            >div {
+                padding: 40px 40px 80px 20px;
+
+                >div {
+                    max-width: 580px;
+
+                    >div {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        >div {
+                            padding: 20px 0 0 20px;
+                            width: 50%;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    .drinks {
+        padding-top: 60px;
+
+        .lets_drink {
+            height: 400px;
+
+            div {
+                h1 {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .drinks {
+        .drinksFlex {
+            >div {
+                >div {
+                    max-width: 280px;
+
+                    >div {
+                        >div {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
