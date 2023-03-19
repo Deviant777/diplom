@@ -1176,7 +1176,7 @@ footer .copyright {
 }
 .whiskies .blackVelvetReserve > div > div {
   position: relative;
-  left: 16%;
+  left: 5%;
 }
 .whiskies .blackVelvetToasted {
   position: relative;
@@ -1212,7 +1212,7 @@ footer .copyright {
 }
 .whiskies .blackVelvetApple > div > div {
   position: relative;
-  left: 16%;
+  left: 5%;
 }
 .whiskies .blackVelvetPeach {
   position: relative;
@@ -1265,6 +1265,12 @@ footer .copyright {
   }
   body > .whiskies > :nth-child(n+2) h2::after {
     width: 165px;
+  }
+  body > .whiskies .blackVelvetPeach > div > div > h2 {
+    max-width: 300px;
+  }
+  body > .whiskies .blackVelvetToasted > div > div > h2 {
+    max-width: 300px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1346,6 +1352,17 @@ footer .copyright {
   }
   body > .whiskies .blackVelvetPeach > div > div {
     left: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .whiskies .blackVelvetToasted > div > div > h2 {
+    max-width: 350px;
+  }
+  .whiskies .blackVelvetApple > div > div > h2 {
+    max-width: 350px;
+  }
+  .whiskies .blackVelvetPeach > div > div > h2 {
+    max-width: 380px;
   }
 }
 .drinks {

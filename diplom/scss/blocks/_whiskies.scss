@@ -146,7 +146,7 @@
 
             >div {
                 position: relative;
-                left: 16%;
+                left: 5%;
             }
         }
     }
@@ -189,7 +189,7 @@
 
             >div {
                 position: relative;
-                left: 16%;
+                left: 5%;
             }
         }
     }
@@ -258,6 +258,26 @@
 
                     &::after {
                         width: 165px;
+                    }
+                }
+            }
+
+            .blackVelvetPeach {
+                >div {
+                    >div {
+                        >h2{
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+
+            .blackVelvetToasted {
+                >div {
+                    >div {
+                        >h2{
+                            max-width: 300px;
+                        }
                     }
                 }
             }
@@ -379,3 +399,37 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+        .whiskies {
+            .blackVelvetToasted {
+                >div {
+                    >div {
+                        >h2{
+                            max-width: 350px;
+                        }
+                    }
+                }
+            }
+
+            .blackVelvetApple {
+                >div {
+                    >div {
+                        >h2{
+                            max-width: 350px;
+                        }
+                    }
+                }
+            }
+
+            .blackVelvetPeach {
+                >div {
+                    >div {
+                        >h2{
+                            max-width: 380px;
+                        }
+                    }
+                }
+            }
+        }
+    }
